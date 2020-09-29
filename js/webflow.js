@@ -6938,20 +6938,35 @@ var forEachEventTarget = function forEachEventTarget(eventTargets, eventCallback
   });
 };
 
-var getAffectedForEvent = function getAffectedForEvent(event) {
-  var config = {
-    target: event.target
-  };
-  return getAffectedElements({
-    config: config,
-    elementApi: elementApi
-  });
+var getAffectedForEvent = function getAffectedForEvent(_ref13) {
+  var singleTarget = _ref13.target,
+      targets = _ref13.targets;
+
+  if (targets && targets.length) {
+    return targets.reduce(function (acc, target) {
+      var config = {
+        target: target
+      };
+      return acc.concat(getAffectedElements({
+        config: config,
+        elementApi: elementApi
+      }));
+    }, []);
+  } else {
+    var config = {
+      target: singleTarget
+    };
+    return getAffectedElements({
+      config: config,
+      elementApi: elementApi
+    });
+  }
 };
 
-function bindEventType(_ref13) {
-  var logic = _ref13.logic,
-      store = _ref13.store,
-      events = _ref13.events;
+function bindEventType(_ref14) {
+  var logic = _ref14.logic,
+      store = _ref14.store,
+      events = _ref14.events;
   injectBehaviorCSSFixes(events);
   var eventTypes = logic.types,
       eventHandler = logic.handler;
@@ -6983,8 +6998,8 @@ function bindEventType(_ref13) {
       configs.forEach(function (eventConfig) {
         var continuousParameterGroupId = eventConfig.continuousParameterGroupId;
         var paramGroups = (0, _get["default"])(actionLists, "".concat(actionListId, ".continuousParameterGroups"), []);
-        var parameterGroup = (0, _find["default"])(paramGroups, function (_ref14) {
-          var id = _ref14.id;
+        var parameterGroup = (0, _find["default"])(paramGroups, function (_ref15) {
+          var id = _ref15.id;
           return id === continuousParameterGroupId;
         });
         var smoothing = (eventConfig.smoothing || 0) / 100;
@@ -7062,11 +7077,11 @@ function bindEventType(_ref13) {
 
   var handleEventThrottled = (0, _throttle["default"])(handleEvent, THROTTLED_EVENT_WAIT);
 
-  var addListeners = function addListeners(_ref15) {
-    var _ref15$target = _ref15.target,
-        target = _ref15$target === void 0 ? document : _ref15$target,
-        types = _ref15.types,
-        shouldThrottle = _ref15.throttle;
+  var addListeners = function addListeners(_ref16) {
+    var _ref16$target = _ref16.target,
+        target = _ref16$target === void 0 ? document : _ref16$target,
+        types = _ref16.types,
+        shouldThrottle = _ref16.throttle;
     types.split(' ').filter(Boolean).forEach(function (type) {
       var handlerFunc = shouldThrottle ? handleEventThrottled : handleEvent; // $FlowFixMe
 
@@ -7122,10 +7137,10 @@ function injectBehaviorCSSFixes(events) {
   }
 }
 
-function renderInitialGroup(_ref16) {
-  var store = _ref16.store,
-      actionListId = _ref16.actionListId,
-      eventId = _ref16.eventId;
+function renderInitialGroup(_ref17) {
+  var store = _ref17.store,
+      actionListId = _ref17.actionListId,
+      eventId = _ref17.eventId;
 
   var _store$getState10 = store.getState(),
       ixData = _store$getState10.ixData,
@@ -7178,8 +7193,8 @@ function renderInitialGroup(_ref16) {
 } // $FlowFixMe
 
 
-function stopAllActionGroups(_ref17) {
-  var store = _ref17.store;
+function stopAllActionGroups(_ref18) {
+  var store = _ref18.store;
 
   var _store$getState11 = store.getState(),
       ixInstances = _store$getState11.ixInstances;
@@ -7201,12 +7216,12 @@ function stopAllActionGroups(_ref17) {
 } // $FlowFixMe
 
 
-function stopActionGroup(_ref18) {
-  var store = _ref18.store,
-      eventId = _ref18.eventId,
-      eventTarget = _ref18.eventTarget,
-      eventStateKey = _ref18.eventStateKey,
-      actionListId = _ref18.actionListId;
+function stopActionGroup(_ref19) {
+  var store = _ref19.store,
+      eventId = _ref19.eventId,
+      eventTarget = _ref19.eventTarget,
+      eventStateKey = _ref19.eventStateKey,
+      actionListId = _ref19.actionListId;
 
   var _store$getState12 = store.getState(),
       ixInstances = _store$getState12.ixInstances,
@@ -7238,16 +7253,16 @@ function stopActionGroup(_ref18) {
 } // $FlowFixMe
 
 
-function startActionGroup(_ref19) {
-  var store = _ref19.store,
-      eventId = _ref19.eventId,
-      eventTarget = _ref19.eventTarget,
-      eventStateKey = _ref19.eventStateKey,
-      actionListId = _ref19.actionListId,
-      _ref19$groupIndex = _ref19.groupIndex,
-      groupIndex = _ref19$groupIndex === void 0 ? 0 : _ref19$groupIndex,
-      immediate = _ref19.immediate,
-      verbose = _ref19.verbose;
+function startActionGroup(_ref20) {
+  var store = _ref20.store,
+      eventId = _ref20.eventId,
+      eventTarget = _ref20.eventTarget,
+      eventStateKey = _ref20.eventStateKey,
+      actionListId = _ref20.actionListId,
+      _ref20$groupIndex = _ref20.groupIndex,
+      groupIndex = _ref20$groupIndex === void 0 ? 0 : _ref20$groupIndex,
+      immediate = _ref20.immediate,
+      verbose = _ref20.verbose;
 
   var _event$action;
 
@@ -7374,8 +7389,8 @@ function createInstance(options) {
 
   var elementId = getElementId(ixElements, element);
 
-  var _ref20 = ixElements[elementId] || {},
-      refState = _ref20.refState;
+  var _ref21 = ixElements[elementId] || {},
+      refState = _ref21.refState;
 
   var refType = elementApi.getRefType(element);
   var origin = getInstanceOrigin(element, refState, computedStyle, actionItem, elementApi, // $FlowFixMe
@@ -7395,8 +7410,8 @@ function createInstance(options) {
 
   observeStore({
     store: store,
-    select: function select(_ref21) {
-      var ixInstances = _ref21.ixInstances;
+    select: function select(_ref22) {
+      var ixInstances = _ref22.ixInstances;
       return ixInstances[instanceId];
     },
     onChange: handleInstanceChange
@@ -7418,9 +7433,9 @@ function removeInstance(instance, store) {
   var _store$getState15 = store.getState(),
       ixElements = _store$getState15.ixElements;
 
-  var _ref22 = ixElements[elementId] || {},
-      ref = _ref22.ref,
-      refType = _ref22.refType;
+  var _ref23 = ixElements[elementId] || {},
+      ref = _ref23.ref,
+      refType = _ref23.refType;
 
   if (refType === HTML_ELEMENT) {
     cleanupHTMLElement(ref, actionItem, elementApi);
@@ -7489,10 +7504,10 @@ function handleInstanceChange(instance, store) {
       var _store$getState19 = store.getState(),
           ixElements = _store$getState19.ixElements;
 
-      var _ref23 = ixElements[elementId] || {},
-          ref = _ref23.ref,
-          refType = _ref23.refType,
-          refState = _ref23.refState;
+      var _ref24 = ixElements[elementId] || {},
+          ref = _ref24.ref,
+          refType = _ref24.refType,
+          refState = _ref24.refState;
 
       var actionState = refState && refState[actionTypeId]; // Choose render based on ref type
 
