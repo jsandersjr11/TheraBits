@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
-<!--  Last Published: Tue Oct 06 2020 11:19:20 GMT+0000 (Coordinated Universal Time)  -->
+<!--  Last Published: Tue Oct 06 2020 23:44:46 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="5f7c3e309fac9b11452a9acb" data-wf-site="5f7c3e30b55c297698a7fcbb">
 <head>
   <meta charset="utf-8">
@@ -29,12 +29,24 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 </style>
-  <script defer="" src="https://connect.podium.com/widget.js#API_TOKEN=95f0e293-9c35-4369-ac5c-7ec3b4fe4ace" id="podium-widget" data-api-token="95f0e293-9c35-4369-ac5c-7ec3b4fe4ace"></script>
+  <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+  <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+  <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwMNuZl01lXmBpdYb5Bd1WHmhIEaqoPB4-F3JJdfzTFLocsU4-h/exec'
+  const form = document.forms['wf-form-Website-Applications']
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </head>
 <body>
   <div class="navbar-container sticky-top bg-gray-4">
     <div class="container">
-      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav"><a href="#" class="w-nav-brand"><img src="https://uploads-ssl.webflow.com/5f7c3e30b55c297698a7fcbb/5f7c4fe5a087427035c1ef06_full_logo_dark.svg" height="32" alt=""></a>
+      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav"><a href="index.html" class="w-nav-brand"><img src="images/full_logo_dark.svg" height="32" alt=""></a>
         <div class="navbar-content">
           <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="nav-link w-nav-link">Home</a>
             <div data-hover="1" data-delay="0" class="nav-link w-dropdown">
@@ -63,19 +75,16 @@ body{
   <div class="section no-top-space bg-gray-4">
     <div class="container">
       <div class="consultation-form w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" method="post">
+        <form id="wf-form-Website-Applications" name="wf-form-Website-Applications" data-name="Website Applications" method="post" action="https://script.google.com/macros/s/AKfycbwMNuZl01lXmBpdYb5Bd1WHmhIEaqoPB4-F3JJdfzTFLocsU4-h/exec" redirect="/thank-you" data-redirect="/thank-you">
           <div class="form-pair">
             <div><label for="name" class="field-label">Your Name </label><input type="text" class="form-input w-input" maxlength="256" name="name" data-name="Name" id="name"></div>
             <div><label for="email" class="field-label">Email Address</label><input type="email" class="form-input w-input" maxlength="256" name="email" data-name="Email" placeholder="you@website.com" id="email" required=""></div>
           </div>
           <div class="form-pair">
             <div><label for="Website" class="field-label">Your Website</label><input type="text" class="form-input w-input" maxlength="256" name="Website" data-name="Website" id="Website"></div>
-            <div><label for="Industry" class="field-label">Industry</label><select id="Industry" name="Industry" data-name="Industry" class="form-input w-select"><option value="">Select one...</option><option value="First">First Choice</option><option value="Second">Second Choice</option><option value="Third">Third Choice</option></select></div>
-          </div>
-          <div class="form-pair">
             <div><label for="Budget" class="field-label">Approximate Budget</label><input type="text" class="form-input w-input" maxlength="256" name="Budget" data-name="Budget" id="Budget"></div>
           </div>
-          <div><label class="field-label">Your Message</label><textarea name="field" maxlength="5000" id="field" data-name="Field" placeholder="Anything else about your project" class="form-input textarea-input w-input"></textarea></div><input type="submit" value="Send Application" data-wait="Please wait..." class="button w-button"></form>
+          <div><label for="Message" class="field-label">Your Message</label><textarea name="Message" maxlength="5000" id="Message" data-name="Message" placeholder="Anything else about your project" class="form-input textarea-input w-input"></textarea></div><input type="submit" value="Send Application" data-wait="Please wait..." class="button w-button"></form>
         <div class="success-message w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
