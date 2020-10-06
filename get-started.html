@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com  -->
 <!--  Last Published: Tue Oct 06 2020 11:19:20 GMT+0000 (Coordinated Universal Time)  -->
-<html data-wf-page="5f7c3e309fac9b710f2a9acf" data-wf-site="5f7c3e30b55c297698a7fcbb">
+<html data-wf-page="5f7c3e309fac9b11452a9acb" data-wf-site="5f7c3e30b55c297698a7fcbb">
 <head>
   <meta charset="utf-8">
   <title>Timber - Webflow HTML Website Template</title>
@@ -32,75 +32,60 @@ body{
   <script defer="" src="https://connect.podium.com/widget.js#API_TOKEN=95f0e293-9c35-4369-ac5c-7ec3b4fe4ace" id="podium-widget" data-api-token="95f0e293-9c35-4369-ac5c-7ec3b4fe4ace"></script>
 </head>
 <body>
-  <div class="announcement-bar bg-gray-1">
+  <div class="navbar-container sticky-top bg-gray-4">
     <div class="container">
-      <div class="announcement-bar-text">
-        <div class="text-small text-spacer">Use this announcement bar to inform users of cookies, promotions, new features etc.</div><a data-w-id="dfcc347b-9488-6802-f907-ea3594cba704" href="#" class="button button-small button-white w-button">Dismiss</a></div>
-    </div>
-  </div>
-  <div class="navbar-container bg-primary">
-    <div class="container">
-      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav"><a href="#" class="w-nav-brand"><img src="images/full_logo_light.svg" height="32" alt=""></a>
+      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar w-nav"><a href="#" class="w-nav-brand"><img src="https://uploads-ssl.webflow.com/5f7c3e30b55c297698a7fcbb/5f7c4fe5a087427035c1ef06_full_logo_dark.svg" height="32" alt=""></a>
         <div class="navbar-content">
-          <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="nav-link nav-link-light w-nav-link">Home</a>
+          <nav role="navigation" class="nav-menu w-nav-menu"><a href="#" class="nav-link w-nav-link">Home</a>
             <div data-hover="1" data-delay="0" class="nav-link w-dropdown">
               <div class="dropdown-toggle w-dropdown-toggle">
-                <div class="nav-link-light">Products</div><img src="images/icon-caret-down-white.svg" alt="" class="nav-dropdown-arrow"></div>
+                <div>Products</div><img src="images/icon-caret-down.svg" alt="" class="nav-dropdown-arrow"></div>
               <nav class="dropdown-list navigation-dropdown-list w-dropdown-list"><a href="website-design.html" class="dropdown-link w-dropdown-link">Website Design</a></nav>
             </div>
-          </nav><a href="get-started.html" target="_blank" class="button button-outline button-white navbar-button w-button">Apply Now</a>
-          <div class="navbar-toggle-button w-nav-button"><img src="images/icon-menu-light.svg" alt="" class="navbar-toggle-icon"><img src="images/icon-x-light.svg" alt="" class="navbar-toggle-cross-icon"></div>
+          </nav><a href="get-started.html" target="_blank" aria-current="page" class="button navbar-button w-button w--current">Apply Now</a>
+          <div class="navbar-toggle-button w-nav-button"><img src="images/icon-menu.svg" alt="" class="navbar-toggle-icon"><img src="images/icon-x.svg" alt="" class="navbar-toggle-cross-icon"></div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="section bg-primary">
-    <div class="container">
-      <div class="career-header"><a href="#" class="text-white">Back to Careers</a>
-        <h1 class="career-heading text-white"></h1>
-        <div class="career-card-details text-large">
-          <div class="text-white"></div>
-          <div class="text-large text-white">, </div>
-          <div class="text-white"></div>
-        </div>
-        <a href="#job-application" class="button button-outline button-white w-inline-block">
-          <div>Apply Now</div>
-        </a>
-      </div>
-    </div>
-    <div class="decoration-container"><img src="images/grid-white.svg" alt="" class="decoration-grid">
-      <div data-w-id="0769e264-c66d-e0ec-fbfa-c11d0d7d78b4" class="decoration-circle bg-primary-2"></div>
     </div>
   </div>
   <div class="section bg-gray-4">
-    <div class="container career-container">
-      <div class="card shadow">
-        <div class="card-body career-description-card-body">
-          <div class="article w-richtext"></div>
+    <div class="container">
+      <div class="page-title">
+        <div class="badge badge-title text-primary-2">
+          <div class="badge-text">Apply Now</div>
+          <div class="badge-bg bg-primary-2"></div>
         </div>
+        <h1>Let’s talk.</h1>
+        <div class="text-large">Kick-off your project by completing the form below.</div>
       </div>
     </div>
   </div>
-  <div id="job-application" class="section no-top-space bg-gray-4">
-    <div class="container career-container">
-      <h3 class="job-application-heading">Apply now</h3>
-      <div class="card card-body shadow">
-        <div class="contact-form w-form">
-          <form id="email-form" name="email-form" data-name="Email Form" class="job-application-form">
-            <div class="form-pair">
-              <div><label for="job-name" class="field-label">Your Name </label><input type="text" class="form-input w-input" maxlength="256" name="job-name" data-name="job-name" id="job-name"></div>
-              <div><label for="job-email" class="field-label">Email Address</label><input type="email" class="form-input w-input" maxlength="256" name="job-email" data-name="job-email" placeholder="you@website.com" id="job-email" required=""></div>
-            </div>
-            <div><label for="job-url" class="field-label">Link to your portfolio</label><input type="text" class="form-input w-input" maxlength="256" name="job-url" data-name="job-url" id="job-url"></div>
-            <div><label for="job-message" class="field-label">Introduce yourself</label><textarea name="job-message" maxlength="5000" id="job-message" data-name="job-message" placeholder="Why do you want to work with us?" class="form-input textarea-input w-input"></textarea></div><input type="submit" value="Submit Application" data-wait="Please wait..." class="button w-button"></form>
-          <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
+  <div class="section no-top-space bg-gray-4">
+    <div class="container">
+      <div class="consultation-form w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" method="post">
+          <div class="form-pair">
+            <div><label for="name" class="field-label">Your Name </label><input type="text" class="form-input w-input" maxlength="256" name="name" data-name="Name" id="name"></div>
+            <div><label for="email" class="field-label">Email Address</label><input type="email" class="form-input w-input" maxlength="256" name="email" data-name="Email" placeholder="you@website.com" id="email" required=""></div>
           </div>
-          <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form.</div>
+          <div class="form-pair">
+            <div><label for="Website" class="field-label">Your Website</label><input type="text" class="form-input w-input" maxlength="256" name="Website" data-name="Website" id="Website"></div>
+            <div><label for="Industry" class="field-label">Industry</label><select id="Industry" name="Industry" data-name="Industry" class="form-input w-select"><option value="">Select one...</option><option value="First">First Choice</option><option value="Second">Second Choice</option><option value="Third">Third Choice</option></select></div>
           </div>
+          <div class="form-pair">
+            <div><label for="Budget" class="field-label">Approximate Budget</label><input type="text" class="form-input w-input" maxlength="256" name="Budget" data-name="Budget" id="Budget"></div>
+          </div>
+          <div><label class="field-label">Your Message</label><textarea name="field" maxlength="5000" id="field" data-name="Field" placeholder="Anything else about your project" class="form-input textarea-input w-input"></textarea></div><input type="submit" value="Send Application" data-wait="Please wait..." class="button w-button"></form>
+        <div class="success-message w-form-done">
+          <div>Thank you! Your submission has been received!</div>
+        </div>
+        <div class="error-message w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
         </div>
       </div>
+    </div>
+    <div class="decoration-container"><img src="images/grid-dark.svg" alt="" class="decoration-grid">
+      <div data-w-id="a759bfa4-77f4-a870-34ca-9c72c671320c" class="decoration-circle bg-primary-3"></div>
     </div>
   </div>
   <div class="footer bg-primary">
@@ -108,7 +93,7 @@ body{
       <div class="footer-content">
         <div class="footer-menus">
           <div class="footer-links-large"><a href="#" class="footer-link footer-link-large text-white">Home</a><a href="website-design.html" class="footer-link footer-link-large text-white">Website Design</a></div>
-          <div class="footer-links"><a href="get-started.html" class="footer-link text-white">Contact</a></div>
+          <div class="footer-links"><a href="get-started.html" aria-current="page" class="footer-link text-white w--current">Contact</a></div>
         </div>
         <div><a href="mailto:hello@therabits.com?subject=Website%3A%20" class="footer-link footer-link-large text-white">hello@therabits.com</a>
           <div class="text-large text-white">1 279 201 6331</div>
