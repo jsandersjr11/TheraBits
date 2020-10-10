@@ -1604,6 +1604,10 @@ figcaption {
   float: none;
 }
 
+.nav-menu.hide {
+  display: none;
+}
+
 .dropdown-toggle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3647,6 +3651,9 @@ figcaption {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+  .expandable-content-wrapper {
+    display: none;
   }
   .dropdown-list.w--open {
     -webkit-transform: none;
