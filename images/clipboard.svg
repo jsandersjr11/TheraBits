@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="38" height="49" viewBox="0 0 38 49">
+  <defs>
+    <polygon id="clipboard-a" points="0 0 18 0 18 2 0 2"/>
+    <path id="clipboard-c" d="M6.0103,5 C6.1845,2.20976 8.5309,0 11.3999,0 C14.2689,0 16.6153,2.20976 16.7895,5 L23,5 L23,8 C23,10.2091 21.2091,12 19,12 L4,12 C1.7909,12 0,10.2091 0,8 L0,5 L6.0103,5 Z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(1)">
+    <path stroke="#000" stroke-width="1.5" d="M6,5.99976 L2,5.99976 C0.89543,5.99976 0,6.89519 0,7.99976 L0,46.0004 C0,47.105 0.89543,48.0004 2,48.0004 L34,48.0004 C35.1046,48.0004 36,47.105 36,46.0004 L36,7.99976 C36,6.89519 35.1046,5.99976 34,5.99976 L31,5.99976"/>
+    <rect width="26" height="32" x="5" y="11" stroke="#000" stroke-width="1.5"/>
+    <rect width="17" height="1" x="9.5" y="16.5" fill="#D8D8D8" stroke="#000"/>
+    <g transform="translate(9 22)">
+      <mask id="clipboard-b" fill="#fff">
+        <use xlink:href="#clipboard-a"/>
+      </mask>
+      <path fill="#000" fill-rule="nonzero" d="M0,0 L0,-2 L-2,-2 L-2,0 L0,0 Z M18,0 L20,0 L20,-2 L18,-2 L18,0 Z M18,2 L18,4 L20,4 L20,2 L18,2 Z M0,2 L-2,2 L-2,4 L0,4 L0,2 Z M0,2 L18,2 L18,-2 L0,-2 L0,2 Z M16,0 L16,2 L20,2 L20,0 L16,0 Z M18,0 L0,0 L0,4 L18,4 L18,0 Z M2,2 L2,0 L-2,0 L-2,2 L2,2 Z" mask="url(#clipboard-b)"/>
+    </g>
+    <rect width="17" height="1" x="9.5" y="28.5" stroke="#000"/>
+    <rect width="12" height="1" x="9.5" y="34.5" stroke="#000"/>
+    <g transform="translate(7)">
+      <mask id="clipboard-d" fill="#fff">
+        <use xlink:href="#clipboard-c"/>
+      </mask>
+      <path fill="#000" fill-rule="nonzero" d="M6.0103,5 L6.0103,7 L7.8893,7 L8.0064,5.12463 L6.0103,5 Z M16.7895,5 L14.7934,5.12463 L14.9105,7 L16.7895,7 L16.7895,5 Z M23,5 L25,5 L25,3 L23,3 L23,5 Z M0,5 L0,3 L-2,3 L-2,5 L0,5 Z M8.0064,5.12463 C8.1139,3.40316 9.5723,2 11.3999,2 L11.3999,-2 C7.4895,-2 4.2551,1.01635 4.0142,4.87537 L8.0064,5.12463 Z M11.3999,2 C13.2275,2 14.6859,3.40316 14.7934,5.12463 L18.7856,4.87537 C18.5447,1.01635 15.3103,-2 11.3999,-2 L11.3999,2 Z M16.7895,7 L23,7 L23,3 L16.7895,3 L16.7895,7 Z M21,5 L21,8 L25,8 L25,5 L21,5 Z M21,8 C21,9.10457 20.1046,10 19,10 L19,14 C22.3137,14 25,11.3137 25,8 L21,8 Z M19,10 L4,10 L4,14 L19,14 L19,10 Z M4,10 C2.8954,10 2,9.10457 2,8 L-2,8 C-2,11.3137 0.6863,14 4,14 L4,10 Z M2,8 L2,5 L-2,5 L-2,8 L2,8 Z M0,7 L6.0103,7 L6.0103,3 L0,3 L0,7 Z" mask="url(#clipboard-d)"/>
+    </g>
+  </g>
+</svg>
