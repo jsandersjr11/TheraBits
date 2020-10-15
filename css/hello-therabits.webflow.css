@@ -2510,6 +2510,7 @@ figcaption {
 }
 
 .consultation-form {
+  display: none;
   max-width: 588px;
   margin-right: auto;
   margin-left: auto;
@@ -3602,6 +3603,12 @@ figcaption {
   margin-bottom: 60px;
 }
 
+.div-block {
+  max-width: 588px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @media screen and (min-width: 1920px) {
   .section.section-large.bg-primary {
     background-color: #1d2b41;
@@ -4432,6 +4439,9 @@ figcaption {
     padding: 10px 24px;
     font-size: 16px;
     line-height: 24px;
+  }
+  .button.button-outline.button-white.navbar-button {
+    display: none;
   }
   .button.navbar-button {
     display: block;
