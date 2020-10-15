@@ -695,7 +695,7 @@ figcaption {
 }
 
 .button.button-outline.button-white {
-  display: block;
+  display: none;
   border-color: hsla(0, 0%, 100%, 0.25);
   background-color: transparent;
   color: #f8f8f8;
@@ -2128,6 +2128,7 @@ figcaption {
 }
 
 .cta-action-text {
+  display: none;
   margin-left: 16px;
 }
 
@@ -3684,6 +3685,9 @@ figcaption {
     padding-top: 13px;
     padding-bottom: 13px;
   }
+  .button.navbar-button {
+    display: none;
+  }
   .form-input.form-input-large {
     height: 60px;
   }
@@ -3842,6 +3846,9 @@ figcaption {
   }
   .testimonial-horizontal.content-row-testimonial {
     margin-top: 24px;
+  }
+  .cta-action-text {
+    display: none;
   }
   .section-large {
     padding-top: 120px;
@@ -4444,7 +4451,7 @@ figcaption {
     display: none;
   }
   .button.navbar-button {
-    display: block;
+    display: none;
   }
   .button.button-spacer {
     margin-right: 0px;
