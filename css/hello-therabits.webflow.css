@@ -706,6 +706,10 @@ figcaption {
   color: #1d2b41;
 }
 
+.button.button-outline.button-white.navbar-button {
+  display: block;
+}
+
 .button.button-white {
   border-color: #fff;
   background-color: #fff;
@@ -1564,6 +1568,7 @@ figcaption {
 }
 
 .nav-link {
+  overflow: visible;
   padding: 0px 0px 0px 24px;
   opacity: 0.5;
   -webkit-transition: opacity 200ms ease;
@@ -1606,7 +1611,7 @@ figcaption {
 }
 
 .nav-menu.hide {
-  display: none;
+  display: block;
 }
 
 .dropdown-toggle {
